@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   AboutSection,
   ArticlesSection,
@@ -8,13 +8,15 @@ import {
   Page,
   ProjectsSection,
   Seo,
-} from "gatsby-theme-portfolio-minimal";
+} from 'gatsby-theme-portfolio-minimal';
+import HeroBanner from '../components/ui/HeroBanner';
 
-const IndexPage = () =>{
+const IndexPage = () => {
   return (
     <>
       <Seo title="Portfolio of Jerin George" />
       <Page useSplashScreenAnimation>
+        <HeroBanner />
         {/* <HeroSection sectionId="hero" /> */}
         {/* <ArticlesSection sectionId="articles" heading="Latest Articles" sources={['Medium']} /> */}
         {/* <AboutSection sectionId="about" heading="About Portfolio Minimal" />
@@ -24,5 +26,5 @@ const IndexPage = () =>{
       </Page>
     </>
   );
-} 
+};
 export default IndexPage;

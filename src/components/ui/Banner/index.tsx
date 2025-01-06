@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import React from "react";
+import { Link } from "gatsby";
 
-import Container from 'components/ui/Container';
-import Button from 'components/ui/Button';
-import TitleSection from 'components/ui/TitleSection';
+import Container from "../Container";
+import Button from "../Button";
+import TitleSection from "../TitleSection";
 
-import * as Styled from './styles';
+import * as Styled from "./styles";
 
 interface Props {
   title: string;
@@ -15,13 +15,18 @@ interface Props {
   linkText: string;
 }
 
-const Banner: React.FC<Props> = ({ title, subtitle, content, linkTo, linkText }) => (
+const Banner: React.FC<Props> = ({
+  title,
+  subtitle,
+  content,
+  linkTo,
+  linkText,
+}) => (
   <Styled.Banner>
     <Container section>
       <div>
         <TitleSection title={title} subtitle={subtitle} />
         <Styled.Content>{content}</Styled.Content>
-        {/* <Styled.Content>{`Recently built`}<a href="http://staging.indibill.in" target="_blank"> <u>IndiBill Invoicing App</u></a></Styled.Content> */}
       </div>
       <Link to={linkTo}>
         <Button primary>{linkText}</Button>
